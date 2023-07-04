@@ -1,0 +1,524 @@
+<!DOCTYPE html><html><head>
+      <title>UI-UX markdown</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/deepak/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.6.8/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="user-interfaceuser-experience">User Interface/User Experience</h1>
+
+<h2 class="mume-header" id="index">INDEX</h2>
+
+<ul>
+<li>
+<p>What is Overview</p>
+</li>
+<li>
+<p>What is User  Interface (UI)</p>
+</li>
+<li>
+<p>Example of User Interface</p>
+</li>
+<li>
+<p>UI Principle</p>
+<ul>
+<li>Know your audience</li>
+<li>Clarity</li>
+<li>Confirmation</li>
+<li>Familiarity</li>
+<li>Familiarity</li>
+<li>Consistency</li>
+</ul>
+</li>
+<li>
+<p>Rating the UI Principles of 5 Websites</p>
+</li>
+<li>
+<p>Rating 5 Websites: How They Were Evaluated and Ranked</p>
+</li>
+<li>
+<p>What is User Experience (UX)</p>
+</li>
+<li>
+<p>Example of User Experience</p>
+</li>
+<li>
+<p>UI/UX interrelated ?</p>
+</li>
+<li>
+<p>Analyze 5 websites in Desktop  Version</p>
+</li>
+<li>
+<p>My Favorite Website</p>
+</li>
+<li>
+<p>Conclusion</p>
+</li>
+</ul>
+<h3 class="mume-header" id="u-overview-u"><u> <em><strong>Overview</strong></em> </u></h3>
+
+<p>In this document, we will discuss User Interface (UI) and provide examples to help understand it. Alongside that, we will also delve into User Experience (UX) and explore its examples. We will then examine the interrelation between User Interface and User Experience. Finally, we will analyze the desktop and mobile versions of 5 different websites. This document has also been uploaded to GitHub in the form of markdown &amp; html language and can be accessed by <em><strong><a href="https://github.com/deepakbahuguna007/UI-UX-In-Markdown">clicking on this link</a></strong></em></p>
+<h3 class="mume-header" id="u-user-interface-ui-u"><u> <em><strong>User interface (UI)</strong></em> </u></h3>
+
+<p>UI stands for User Interface. The interaction between user and product to perform any task presented through interface is called user interface design.</p>
+<p>UI, in simple terms, refers to how your product (Website, application) appears when viewed by users. Which theme have you used for your product? What is the font of your product? How is the color scheme? How much do users like your product? Do they like it or not? All these criteria fall under UI. UI is crucial for any product.<br>
+In order to better explain what I see as the minimum requirement for what a login  &amp; sign-up page should look like, I created this figma page which showcases a login &amp; sign-up page that I deem as visually pleasing. <em><strong>(Figure 1)</strong></em></p>
+<center>
+<p><img src="images/figmaloginsignup.png" alt="Alt text"></p>
+<p>Figure: 1</p>
+</center>
+<h3 class="mume-header" id="uexample-of-uiu"><u><em><strong>Example of UI</strong></em></u></h3>
+
+<p>A user is watching TV at home. The TV is a product, and to interact with the television, the user uses a remote control. Now we have two products, one is the TV, and the other is the remote control. Here, the user&apos;s task is to increase the volume of the TV. For this, the user uses the remote, and the remote is designed in such a way that it is clear to the user which button to press to increase the volume. The designer of the remote has clearly mentioned that &quot;VOL&quot; stands for &quot;Volume,&quot; and &quot;+&quot; is for increase, and &quot;-&quot; is for decrease. This can be better understood through this [visual representation] <em><strong>(Figure 2.1)</strong></em></p>
+<center>
+<p><img src="images/fig2.1.png" alt="Alt text"></p>
+<p>Figure 2.1</p>
+</center>
+<p>The user watches the television to see the result of increasing the volume. A volume bar appears indicating an increase in volume. From there, the user realizes whether the television&apos;s volume is increasing or decreasing. Now, the user is satisfied that the task they performed, which was to increase the volume, was displayed through the television&apos;s interface, showing that the volume has increased. This can be better understood through this visual representation <em><strong>(FIgure 2.2)</strong></em></p>
+ <center>
+<p><img src="images/fig2.2.png" alt="Alt text"><br>
+Figure: 2.2</p>
+ </center>
+<h3 class="mume-header" id="uanother-example-of-uiu"><u><em><strong>Another Example of UI</strong></em></u></h3>
+
+<p>I have a toy car. The User Interface (UI) of the toy car is everything you can see and touch on the outside. It&apos;s like the buttons, switches, and wheels that you use to make the car do different things.</p>
+<p>There might be a big button on the top of the car that you press to make it move forward. When you press the button, the car starts to roll and move forward. That button is part of the UI because it&apos;s what you use to control the car.</p>
+<p>The UI can also have other things like a steering wheel that you can turn to make the car change direction. When you turn the wheel, the car will go left or right. These are all parts of the UI because they help you interact with and control the toy car.</p>
+<p>So, UI includes the special buttons, switches, and parts of the toy car that you use to make it do fun things. It&apos;s what makes the toy car easy and fun for you to play with!<br>
+This can be better understood through this Visual Representation <em><strong>(Figure 3)</strong></em></p>
+<center>
+<p><img src="images/fig3.png" alt="Alt text"><br>
+Figure 3</p>
+ </center>
+<h3><u><em><strong>UI Principle</strong></em></u></h3>
+<p>I have mentioned some principles of UI design that are essential to consider before designing UI.</p>
+<p><u><em><strong>Know your audience</strong></em></u></p>
+<p>I need to know who your target audience is. The type of users who will use the product I am going to create...<br>
+If I have to make a lunchbox for school children, I will design a lunchbox that has a cartoon-themed design. I will make sure it can be easily opened and closed, and I will keep its weight light.<br>
+On the other hand, if I have to make a lunchbox for office professionals, I will design it according to their needs and preferences...</p>
+<p>This can be better understood through this Visual Representation <em><strong>(Figure 4 )</strong></em></p>
+<center>
+<p><img src="images/fig4.png" alt="Alt text"></p>
+<p>Figure: 4</p>
+</center>
+<p><u><em><strong>Clarity</strong></em></u></p>
+<p>The user interface should be clear for the user, just like in Gmail where multiple options are provided, such as the &quot;Compose&quot; option for writing a new email and options for deleting emails. <em><strong>(Figure 5.1)</strong></em></p>
+<center>
+<p><img src="images/fig5.1.png" alt="Alt text"><br>
+Figure 5.1</p>
+</center>
+<p>And if I need to perform a task, for example, if I have to write an email, when I click on the &quot;Compose&quot; button for a new email, a new window opens, which helps me know where to write the new email&#x2026;</p>
+<p>This can be better understood through this Visual Representation <em><strong>(Figure 5.2)</strong></em></p>
+<center>
+<p><img src="images/fig5.2.png" alt="Alt text"></p>
+<p>Figure:5.2</p>
+</center>
+<p><u><em><strong>Confirmation</strong></em></u></p>
+<p>The user&apos;s action has been confirmed, and a message should be displayed here...<br>
+For example, if a user likes a bag on Snapdeal and clicks on the &quot;Add to Cart&quot; button to purchase it, after that, a confirmation message is shown to the user stating that their product has been added to the cart.</p>
+<p>This can be better understood through this Visual Representation <em><strong>( Figure 6 )</strong></em></p>
+<center>
+<p><img src="images/fig6.png" alt="Alt text"><br>
+Figure 6</p>
+</center>
+<p><u><em><strong>Familiarity</strong></em></u></p>
+<p>Users are familiar with everyday objects. Those should be kept in mind while designing.<br>
+The icon for the on/off button of a remote is typically placed at the top right corner. The same icon is positioned at the top right corner of the HDFC app, indicating to the user that they can use it to close the app.</p>
+<p>This can be better understood through this Visual Representation <em><strong>(Figure 7 )</strong></em></p>
+<center>
+<p><img src="images/fig7.png" alt="Alt text"><br>
+Figure: 7</p>
+</center>
+<p><u><em><strong>Consistency</strong></em></u></p>
+<p>A consistent user interface means that everything in a website or app looks and works in a similar way. It&apos;s like having a set of rules that make everything easy to understand and use. Imagine if every page or screen looked different and had different buttons or colors&#x2014;it would be confusing, right? Consistency means that everything looks the same and works in the same way, so you know what to expect. <em><strong>(Figure 8)</strong></em></p>
+<center>
+<p><img src="images/fig8.png" alt="Alt text"><br>
+Figure: 8</p>
+</center>
+<p><u><em><strong>Rating the UI Principles of 5 Websites</strong></em></u></p>
+<p>I Have Given Ratings To 5 Websites (Amazon,Flipkart,Myntra,Snapdeal,ShopClues) based on these  UI principles. which I have explained above.</p>
+<center>
+<p><img src="images/Rating2.png" alt="Alt text"><br>
+Table:1</p>
+</center>
+<p><u><em><strong>Rating 5 Websites: How They Were Evaluated and Ranked</strong></em></u></p>
+<p><em><strong>Know your audience</strong></em></p>
+<p><strong>Amazon</strong>- I am giving Amazon a 4-star rating because it has the option to change the language for customer convenience. Also, the recently seen product section, which is available on the home page, provides recommendations based on purchase history.</p>
+<p><strong>Flipkart</strong>- Flipkart also provides similar features like Amazon, but I gave it one star less because it doesn&apos;t have the option to change the language.</p>
+<p><strong>Myntra</strong>- I will give Myntra a 4-star rating because Myntra has every feature available, such as suggesting products based on browsing history, creating a separate section for recently viewed products, tracking previously purchased orders, and viewing order history. I deducted one star because it doesn&apos;t have the option to change the language, which is essential.</p>
+<p><strong>Snapdeal</strong>- I am giving Snapdeal a 2-star rating because its home page lacks any options or product sections that would make it easy for customers to purchase products. However, I am giving it 2 stars because the search bar has a great feature with trending search options. Additionally, the login page provides extra convenient options for logging in.</p>
+<p><strong>ShopClues</strong>- I deducted one star because there could have been more options available, such as a section for recently viewed products or additional product sections, which would have made it easier for users to navigate and use the website.</p>
+<p><em><strong>Clarity</strong></em></p>
+<p><strong>Amazon-</strong> I have dedicated 3  stars because the product category options and the available options on the home page are not displayed clearly. The navigation bar is also not clear. However, I gave it 2 stars because the product images are very clear, and the product details are presented in a clear and easy-to-understand manner.</p>
+<p><strong>Flipkart-</strong> I have given the Flipkart website 5 stars because the login and signup pages are kept clean and simple. The navigation bar on the home page is clean and clear, and the product pictures and details are presented in the right way, which is why I have given it 5 stars.</p>
+<p><strong>Myntra-</strong> I have also given Myntra 5 stars because its login and signup pages are very clear and easy to use. Every function in it is easy to understand, and its home page has clear functions. The navigation bar is clean and understandable as well. Each section is placed in a very clear location.</p>
+<p><strong>Snapdeal-</strong> I have given Snapdeal 2 stars because its navigation is clear and easy to understand, and the product images are also clear. Moreover, the product details are provided in a detailed manner. That&apos;s why I have given it 2 stars.<br>
+I deducted 3 stars because there are few sections for products  category on the home page, and the product category section is not clear either.</p>
+<p><strong>ShopClues-</strong> I have given Shopclues 5 stars because its login page and signup page are clear. The navigation bar on the home page is easy to understand. The product pictures are clear, providing all the necessary details, which makes it easy for users to understand the product.</p>
+<p><em><strong>Confirmation</strong></em></p>
+<p><strong>Amazon-</strong> I have given Amazon a 5-star rating because it shows me messages for any process I perform. For example, when I add an item to the cart, it shows a message for the payment being completed, a message for logging in, and a confirmation message when the order is placed.</p>
+<p><strong>Flipkart-</strong> The confirmation feature in this platform is also similar to Amazon&apos;s. However, whenever I place an order or use the &quot;Add to Cart&quot; option, I don&apos;t receive the confirmation messages, which is why I deducted one star from Flipkart.</p>
+<p><strong>Myntra-</strong> I have given Myntra a 5-star rating because it shows a confirmation message when adding items to the cart and wishlist, as well as during the login/signup process.</p>
+<p><strong>Snapdeal-</strong> I have given this website a 5-star rating because it provides confirmation messages for various actions, such as adding a product, where a message appears confirming that the product has been added. Even when adding items to the wishlist, a confirmation message is displayed. Similarly, when deleting an order, a message is shown stating that the order has been deleted.</p>
+<p><strong>ShopClues-</strong>  I have also given ShopClues a 5-star rating, just like Snapdeal, because it also shows a confirmation message when we add a product to the cart. It also displays a confirmation message when an offer is applied. When we place an order for a product, a confirmation message of &quot;Order Placed&quot; is shown.</p>
+<p><em><strong>Familiarity</strong></em></p>
+<p><strong>Amazon-</strong> I have given Amazon a 4-star rating because it provides category options at the top and the banner section is placed in its appropriate position. However, they did not use the popular icons in the navigation bar, which is why I deducted one star.</p>
+<p><strong>Flipkart-</strong> I have also given Flipkart a 4-star rating because it has familiar sections like the banner section, navigation bar, and product categories placed in their respective positions, just like Amazon. However, I deducted one star because they also did not use popular icons in the navigation bar.</p>
+<p><strong>Myntra-</strong> I have given Myntra a 5-star rating because it has everything available that users are familiar with, such as popular icons in the navigation bar, category sections at the top, and banners on top of the home page easily visible to everyone . That&apos;s why I have given it 5 stars.</p>
+<p><strong>Snapdeal &amp; ShopClues-</strong> I have also given Snapdeal and ShopClues a 5-star rating because they have also utilized all the familiar sections and functions, just like Myntra.</p>
+<p><em><strong>Consistency</strong></em></p>
+<p><strong>Amazon-</strong> I have given Amazon a 5-star rating because every page on their website has the same consistent navigation bar, and the fonts used are consistent across each page as well. The color of buttons (such as Add to Cart, Buy Now, Proceed, etc.) is also uniform throughout, which makes it easier for users to understand the website.</p>
+<p><strong>Flipkart-</strong> I have given Flipkart a 4-star rating. I deducted one star because its navigation bar is different on the homepage compared to other pages. However, all the other functions and options are consistent like Amazon, which is why I have given it 4 stars.</p>
+<p><strong>Myntra-</strong> I have given Myntra a 5-star rating because it maintains consistency in every aspect, including navigation bar colors, button colors, fonts, and all layouts. That&apos;s why I have given it 5 stars.</p>
+<p><strong>Snapdeal-</strong> I have given Snapdeal a 5-star rating because it maintains consistency in everything. The navigation bar, navigation colors, fonts, and button colors are all consistent throughout, with black and red being used everywhere.</p>
+<p><strong>ShopClues-</strong> I have given ShopClues a 4-star rating. The navigation bar color, fonts, and main heading links are consistent across all pages, which is why I have given it four stars. However, I deducted one star because the buttons have different colors used, which is inconsistent.</p>
+<h3 class="mume-header" id="u-user-experience-ux-u"><u> <em><strong>User Experience (UX)</strong></em> </u></h3>
+
+<p>User experience design is the process of enhancing user satisfaction with a product by improving the usability, accessibility and pleasure provided in the interaction with the product .</p>
+<p>User experience Design is about creating hassle-free and enjoyable experiences .</p>
+<h3 class="mume-header" id="uexample-of-uxu"><u><em><strong>Example of UX</strong></em></u></h3>
+
+<p>Here are some examples of UX .</p>
+<ul>
+<li>If someone drinks a cup of tea from a glass, After drinking the tea, they can experience whether it is sweet, bitter, or bland. That will be their user experience. This can be better understood through this Visual Representation. <em><strong>(Figure 9)</strong></em></li>
+</ul>
+<center>
+<p><img src="images/fig9.png" alt="Alt text"></p>
+<p>Figure: 9</p>
+  </center>
+<ul>
+<li>In the past, we used to use telephones, and to use a telephone, we had to go to a particular place; we couldn&apos;t carry it with us. This can be better understood through this Visual Representation. <em><strong>(Figure 10)</strong></em></li>
+</ul>
+<center>
+<p><img src="images/fig10.png" alt="Alt text"></p>
+<p>Figure: 10</p>
+</center>
+<ul>
+<li>In the old times, to use any settings of the TV, we had to go near it and use its buttons. For example, if we wanted to increase the volume, we had to go to the TV and adjust it using its buttons. This can be better understood through this visual Representation. <em><strong>(Figure 11)</strong></em></li>
+</ul>
+<center>
+<p><img src="images/fig11.png" alt="Alt text"><br>
+FIgure: 11</p>
+</center>
+<ul>
+<li>If we talk about the company&apos;s corridor UX , there should be lights so that people can see properly and walk correctly. There should be signboards in the corridor to indicate the directions, and there should be seating arrangements. The floors should have properly laid tiles, and there should be no slippery tiles. This can be better understood through this visual Representation. <em><strong>(Figure 12)</strong></em></li>
+</ul>
+<center>
+<p><img src="images/corridor.jpg" alt="Alt text"><br>
+Figure 12</p>
+</center>
+<ul>
+<li>The UX of a chair is good for a person when the user feels comfortable sitting in it, and when it has wheels that enable easy movement from one place to another. The user should be able to adjust the chair&apos;s height according to their preference.This can be better understood through this visual Representation. <em><strong>(Figure 13)</strong></em></li>
+</ul>
+<center>
+<p><img src="images/chairux.png" alt="Alt text"><br>
+Figure: 13</p>
+</center>
+<h3 class="mume-header" id="uuiux-interrelatedu"><u><em><strong>UI/UX interrelated</strong></em></u></h3>
+
+<p>The roles of UI and UX are very important in making a product user-friendly and popular; and they are interconnected.</p>
+<p>UI, which stands for User Interface, includes all the things we see and touch on a product. It includes buttons, switches, colors, shapes, and everything we use to control the product. UI helps make the product easy and accessible. For example, if we have a toy car, its buttons and steering wheel are part of its UI, which we use to control the car.</p>
+<p>UX, which stands for User Experience, is about how we feel and experience the product. It is about our happiness and enjoyment while using it. For example, if the buttons on our toy car are hard to press or if the car doesn&apos;t move smoothly, our experience may not be as enjoyable.</p>
+<p>So, UI and UX work together to make a product good. When the UI is well designed, it enhances our UX and overall experience. UI and UX make the product easy and enjoyable to use.</p>
+<p>Now  here is an example showing the interrelation between UI &amp; UX.</p>
+<h3 class="mume-header" id="uexampleu"><u><em><strong>Example</strong></em></u></h3>
+
+<p>Imagine you are at a big party where there is a special place for food. This place is like a counter where people can go and get delicious food to eat. As a UI/UX designer, my job is to make sure this food counter is easy for everyone to access and enjoyable.</p>
+<p>To make it easy, we can have signs or big pictures showing what kind of food is available. For example, we can have pictures of yummy pizzas, colorful cupcakes, and tasty fruits. This helps people see what food they can choose from.</p>
+<p>We can also make sure the food counter is organized in a way that makes sense. Similar foods can be placed together, like all the snacks in one place and all the desserts in another. This makes it easier for people to find what they want.</p>
+<p>To make it fun, we can have special plates or bowls with fun colors and designs. We can also have friendly helpers at the counter who can guide people and answer their questions about the food.</p>
+<p>The most important thing is to make sure that everyone feels happy and satisfied when they get their food. We want people to enjoy their meals and have a great time at the food counter.</p>
+<p>So, as a UI/UX designer, I use my creativity to design the food counter in a way that makes it easy, fun, and enjoyable for everyone to choose and eat delicious food. This can be better understood through this Visual Representation.</p>
+<center>
+<p><img src="images/fig14.png" alt="Alt text"><br>
+Figure: 14</p>
+ </center>
+<h3 class="mume-header" id="uanalyze-5-websiteu"><u><em><strong>Analyze 5 website</strong></em></u></h3>
+
+<p>Now I will analyze five websites and check their UI/UX. Based on their UI/UX, I will rate them to determine which ones have good UI/UX and which ones have poor UI/UX.<br>
+I have selected five websites for analysis. AMAZON, FLIPKART, SNAPDEAL SHOPCLUES &amp; MYNTRA.</p>
+<p>I have analyzed the UI/UX of these websites separately for Desktop platforms. this analysis has been formulated in tabular form and can be accessed by clicking   <em><strong><a href="https://docs.google.com/spreadsheets/d/1xLdmK9SNnfqLq6KvV5kyaiio6XNitGx_bIDxrcuaHTE/edit?usp=sharing">this link</a></strong></em></p>
+<h3 class="mume-header" id="umy-favorite-websiteu"><u><em><strong>My Favorite Website</strong></em></u></h3>
+
+<p>After analyzing Amazon, Flipkart, Myntra, and ShopClues, it can be said that none of the websites have a good overall UI/UX. If one website has a good UI on one page, its UX is not good on another page. Similarly, if a website has good UX on a certain page, its UI may be average or poor.</p>
+<p>When we talk about Amazon&apos;s UI, it is not very good. Its search bar, fonts, mouse-over effect, and navigation bar all look old. However, its UX is okay, the search bar looks normal but gives accurate results. The cart page has a very good UX with features like &quot;Save for Later&quot; and multiple payment options. These things make its UX better.</p>
+<p>When we talk about Flipkart&apos;s UI, it is quite good compared to Amazon. Its product category section with pictures is impressive. The banner on its homepage looks nice too. However, when it comes to the login and signup pages, they are just average, but better than Amazon&apos;s. Now, let&apos;s talk about its UX. The UX is similar to Amazon&apos;s and works fine. Even in Flipkart, the cart page has a &quot;Save for Later&quot; option. The search bar is very accurate.</p>
+<p>When we talk about Myntra&apos;s UI, it is very good. The search bar on its homepage is placed in the right spot, and the overall navigation bar looks clean. The icons in the navigation bar look nice. The payment page is very clear. Now, let&apos;s talk about its UX. The UX is also good. There are many payment options, and the links are easy to understand. The &quot;Place to Order&quot; button is in the right place. However, the UX of the search bar could be better.</p>
+<p>When we talk about Snapdeal&apos;s UI/UX, it is not very good. There are only 1-2 UI features that are good, which even Amazon doesn&apos;t have, such as the mouse-over event. The footer section of Snapdeal is better than Flipkart&apos;s and looks nice. Now, let&apos;s talk about its UX. The extra login option provided by Snapdeal is good.</p>
+<p>When we talk about ShopClues&apos; UI/UX, it is not very good. Everything looks quite ordinary, including the navigation and footer on the homepage. The mouse-over event is okay, which is not available even on Amazon. Now, let&apos;s talk about its UX. The additional login/signup option using Facebook is good. However, there are very few payment options available.</p>
+<p>My favorite website with good UI/UX is Myntra. Although its UX has a few things missing, like search bar suggestions and the login/signup page could be improved with more offers. But if we remove those points, Myntra is my favorite website for UI/UX.</p>
+<h3 class="mume-header" id="uconclusionu"><u><em><strong>Conclusion</strong></em></u></h3>
+
+<p>In summary, User Interface (UI) refers to the visual appearance and usability of a product, while User Experience (UX) focuses on enhancing user satisfaction during interactions with the product.</p>
+<p>Good UI includes well-designed elements such as clear buttons and intuitive navigation, while good UX ensures a seamless and enjoyable user experience.</p>
+<p>Among the analyzed websites (Amazon, Flipkart, Myntra, Snapdeal, and ShopClues), Myntra stood out as the favorite with its good UI and overall satisfactory UX. It is important for digital products to prioritize both UI and UX to create a positive user experience.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
